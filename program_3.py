@@ -9,12 +9,20 @@
 # Over 10 pounds	$4.75
 # Write a program which calculates the shipping charge and displays the total.
 
+
+# Calculate the shipping charge.
 def weight_conversion(weight):
-    # Calculate the shipping charge.
     shippingCost = 0.0
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
+
+     if weight <= 2:
+        shippingCost = weight * 1.50
+    elif 2 < weight <= 6:
+        shippingCost = weight * 3.00
+    elif 6 < weight <= 10:
+        shippingCost = weight * 4.00
+    elif weight > 10:
+        shippingCost = weight * 4.75
+
     
     return shippingCost
 
